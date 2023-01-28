@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form    onsubmit="return validate()" >
+    <div class="container">
+      <div class="center">  <h1>NIC Registration Form</h1>
+        <label >Enter your name</label>
+        <input type="alphabet" class="name" id="name" >
+        <error id="alert name"></error>
+        <label  >Enter e-mail </label>
+        <input type="text" id="email" onclick="check()" >
+        <error id="alert e-mail"></error>
+        <label > Enter phone number</label>
+        <input type="number" class="phone" id="phone" onclick="lol()">
+        <error id="alert no"></error>
+        <label > Enter your NIC</label>
+        <input type="number" class="nic" id="nic"  onclick="dow()">
+        <error id="alert nic"></error>
+        <label > Enter last qualification degree name</label>
+        <input type="text" class="degree" id="degree" onclick="flow()" >
+        <error id="alert degree"></error>
+        <button class="submit" type="submit">submit</button>
+    </div> </div>
+    </form>
+    
+</body>
+<script>
+var nam = document.getElementById('name');
+function check(){
+    if(nam.value.length ==0){
+        document.getElementById('alert name').innerText="Enter your name"  
+      
+    }
+     else{
+        document.getElementById('alert name').innerText=""    
+      
+    }
+}
+var mail = document.getElementById('email');
+function lol(){
+    if(mail.value.length ==0){
+        document.getElementById('alert e-mail').innerText="Enter your email"    
+        
+    }
+     else{
+        document.getElementById('alert e-mail').innerText=""    
+    
+    }
+}
+var nic =  document.getElementById('nic');
+function flow(){
+    
+    if(nic.value.length ==0){
+        document.getElementById('alert nic').innerText="Enter your NIC"  ;
+        
+    
+    }
+     else{
+
+        document.getElementById('alert nic').innerText="" ;   
+        
+        
+    }
+}
+var phon =document.getElementById('phone');
+function dow(){
+    
+    if(phon.value.length ==0){
+        document.getElementById('alert no').innerText="Enter your phone number"    
+        
+    }
+     else{
+        document.getElementById('alert no').innerText=""    
+        
+    }
+}
+var deg =document.getElementById('degree')
+function call(){
+   
+    if(deg.value.length ==0){
+        document.getElementById('alert degree').innerText="Enter your phone number"    
+    }
+     else{
+        document.getElementById('alert degree').innerText=""    
+    }
+}
+function validate(){
+   if(nam.value.length == 0 ||mail.value.length ==0||nic.value.length ==0 || phon.value.length ==0||deg.value.length ==0){
+          alert("blank are not allowed");
+        return false;
+   }
+   else{
+       
+        alert("THANKS FOR REGISTRATION"); 
+        return true;
+   }
+  
+
+}
+</script>
+</html>
